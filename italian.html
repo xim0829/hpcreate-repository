@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>italian - 洗練された空間</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #eee;
+            line-height: 1.6;
+        }
+        .header-bg {
+            background-image: url('S__40468743_0 - あわわわ.jpg'); /* メインビジュアル画像 */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* ビューポートの高さに合わせて全画面表示 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* ヘッダーとメインコンテンツを上下に配置 */
+            color: #fff;
+            position: relative;
+        }
+        .header-bg::before { /* 画像の上に重ねる半透明の黒いオーバーレイ */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+            z-index: 1;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 2; /* オーバーレイより手前に表示 */
+            position: relative;
+        }
+        nav .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ccc;
+        }
+        .main-content {
+            flex-grow: 1; /* 残りのスペースを埋める */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 2; /* オーバーレイより手前に表示 */
+            position: relative;
+        }
+        .main-content h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .main-content p {
+            font-size: 1.5em;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            white-space: pre-line; /* 改行を反映 */
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ddd;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #777;
+        }
+        .text-content p {
+            font-size: 1.1em;
+            color: #ccc;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .grid-item {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .grid-item h3 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .grid-item p {
+            color: #bbb;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background-color: #282828;
+        }
+        .cta-section h2 {
+            font-size: 2.2em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #777;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            font-size: 0.9em;
+            background-color: #111;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #777;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bg">
+        <nav>
+            <a href="#" class="logo">{{company_name}}</a>
+            <ul>
+                <li><a href="#about">コンセプト</a></li>
+                <li><a href="#menu">メニュー</a></li>
+                <li><a href="#access">アクセス</a></li>
+                <li><a href="#contact">ご予約</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <h1>{{company_name}}</h1>
+            <p>いいね</p>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <h2 class="section-title">コンセプト</h2>
+        <div class="text-content">
+            <p>都会の喧騒を忘れさせる、洗練された隠れ家のような空間で、五感を刺激する特別なひとときを。厳選された旬の食材が織りなす創作料理と、ソムリエが厳選したワインのマリアージュをお楽しみください。</p>
+            <p>当店では、お客様一人ひとりに合わせたパーソナルなサービスを心掛けております。記念日のお祝いや大切なビジネスディナー、友人との語らいの場として、あらゆるシーンにご利用いただけます。</p>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <h2 class="section-title">メニュー</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>テイスティングコース</h3>
+                <p>シェフが厳選した旬の食材を贅沢に使用した、季節限定の特別なコースです。一品一品に込めた想いと技術をご堪能ください。</p>
+            </div>
+            <div class="grid-item">
+                <h3>アラカルト</h3>
+                <p>こだわりの前菜からメインディッシュ、デザートまで、多彩なメニューをご用意しております。お客様のお好みに合わせてお選びください。</p>
+            </div>
+            <div class="grid-item">
+                <h3>ワインペアリング</h3>
+                <p>ソムリエが各料理に最適なワインを選定し、最高の組み合わせをご提案します。料理とワインの新たな発見をお楽しみいただけます。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="section">
+        <h2 class="section-title">アクセス</h2>
+        <div class="text-content">
+            <p>所在地：東京都中央区銀座1-2-3 銀座ビルB1F</p>
+            <p>営業時間：<br>ランチ 11:30 - 14:00 (L.O. 13:30)<br>ディナー 18:00 - 23:00 (L.O. 22:00)</p>
+            <p>電話番号：03-XXXX-XXXX</p>
+            <p>定休日：毎週月曜日</p>
+            <p>交通：<br>東京メトロ銀座線「銀座駅」A3出口より徒歩3分<br>JR山手線「有楽町駅」中央口より徒歩7分</p>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <h2 class="section-title">ご予約</h2>
+        <p style="color: #ccc; margin-bottom: 40px; font-size: 1.1em;">
+            特別な日のお食事や、大切な方との語らいに、ぜひご利用ください。<br>
+            オンラインまたはお電話にてご予約を承っております。
+        </p>
+        <a href="#" class="cta-button">オンライン予約はこちら</a>
+    </div>
+
+    <footer>
+        <p>© 2025 {{company_name}} All Rights Reserved.</p>
+        <p><a href="#">プライバシーポリシー</a> | <a href="#">サイトマップ</a></p>
+    </footer>
+</body>
+</html>
