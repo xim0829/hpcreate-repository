@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{restaurant_name}} - 洗練された空間</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #eee;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #333;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .main-visual {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #333;
+        }
+        .main-visual img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .message-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #333;
+        }
+        .message-section p {
+            font-size: 1.1em;
+            color: #ccc;
+            white-space: pre-line; /* 改行を反映 */
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ddd;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .info-section {
+            padding: 40px 0;
+        }
+        .info-section p {
+            margin-bottom: 15px;
+            color: #999;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{restaurant_name}}</h1>
+            <p style="color: #999;">洗練された空間で特別なひとときを</p>
+        </header>
+
+        <div class="main-visual">
+            <img src="flow chart - あわわわ.jpg" alt="店舗イメージ">
+        </div>
+
+        <section class="message-section">
+            <h2 class="section-title">メッセージ</h2>
+            <p>{{message}}</p>
+        </section>
+
+        <section class="info-section">
+            <h2 class="section-title">店舗情報</h2>
+            <p>所在地： 東京都千代田区丸の内〇〇</p>
+            <p>営業時間： 18:00 - 23:00 (ラストオーダー 22:00)</p>
+            <p>電話番号： 03-XXXX-XXXX</p>
+            <p><a href="#" style="color: #777; text-decoration: none;">オンライン予約はこちら</a></p>
+        </section>
+
+        <footer>
+            <p>© {{restaurant_name}} All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
